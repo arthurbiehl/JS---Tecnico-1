@@ -19,9 +19,12 @@ function create() {
 
 function transformarEmH(e) {
 
-    const trans = e / 60;
-
-    return trans.toFixed(2);
+    const horas = Math.floor(e/ 60);          
+    const min = e % 60;
+    const textoHoras = (`00${horas}`).slice(-2);
+    const textoMinutos = (`00${min}`).slice(-2);
+    
+    return `${textoHoras }:${textoMinutos}`;
 
 }
 
